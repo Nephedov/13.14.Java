@@ -2,33 +2,57 @@
 
 ## Решения
 ### Задание 1
- * <a href="https://github.com/Nephedov/13.14.Java/tree/6a6217acc57c530fd9a785f1db311581b9ce7b87/src/main/java/ru/netology/javaqa">src/main/java/ru/netology/javaqa</a>.
- * <a href="https://github.com/Nephedov/13.14.Java/blob/6a6217acc57c530fd9a785f1db311581b9ce7b87/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Product.java">Product.java</a> - родительский класс описывающий "продукт".
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Book.java">Book.java</a> - дочерний класс расширяющий "продукт" родительского класса.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Smartphone.java">Smartphone.java</a> - дочерний класс расширяющий "продукт" родительского класса.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/ProductRepository.java">ProductRepository.java</a> - класс-репозиторий.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/ProductManager.java">ProductManager.java</a> - класс-менеджер.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/13.14.Java/tree/main">main</a> с проектом.
 ### Задание 2
- * <a href="https://github.com/Nephedov/13.14.Java/tree/7a3b739fed66fb2674e87ceff29ddb863db65052/src/main/java/ru/netology/javaqa">src/main/java/ru/netology/javaqa</a>.
- * <a href="https://github.com/Nephedov/13.14.Java/blob/7a3b739fed66fb2674e87ceff29ddb863db65052/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/main/java/ru/netology/javaqa/Product.java">Product.java</a> - с добавленным boolean matcher.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/main/java/ru/netology/javaqa/Book.java">Book.java</a> - с переопределенным matcher родительского класса.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/main/java/ru/netology/javaqa/Smartphone.java">Smartphone.java</a> - с переопределенным matcher родительского класса.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/13.14.Java/tree/rich">rich</a> с проектом.
+
 ### Задание 3, 4
- * <a href="https://github.com/Nephedov/13.14.Java/tree/b404f93c2ecce6a53aa953bbd4d3c4bc41a40a62/src/main/java/ru/netology/javaqa">src/main/java/ru/netology/javaqa</a>.
- * <a href="https://github.com/Nephedov/13.14.Java/blob/b404f93c2ecce6a53aa953bbd4d3c4bc41a40a62/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/NotFoundException.java">NotFoundException.java</a> - генерирующий исключение при попытке удаления несуществующего "продукта".
+* <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/AlreadyExistsException.java">AlreadyExistsException.java</a> - генерирующий исключение при попытке добавления "продукта" с повторяющимся id.
+* <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a> - автотесты.
+
+Ветка <a href="https://github.com/Nephedov/13.14.Java/tree/expection">expection</a> с проектом.
 ## Что было сделано
-  * Создан и настроен Maven проект с плагинами:
-    * JunitJupier.
-    * Surefire.
-    * Lombok.
-    * Jacoco в режиме генерации отчетов и обрушения сборки по покрытию 100% по бранчам методов.
-    * Github Ci c verify-сборкой.
-  * Разрабон базовый класс Product.java.
-  * Разработано два унаследованных от Product.java класса: Book.java, Smartphone.java.
-  * Разработан репозиторий ProductRepository.java для сохранения, получения сохраненных, удаления Product.
-  * Разработан менеджер ProductManager.java, для добавления Product в репозиторий и осуществления поиска по ним.
-  * Реализован класс с автотестами ProductRepositoryTest.java. проверяющий работу разработанных классов.
-  * Создана ветка rich от ветки main в которой:
-    * Добавлен boolean matcher в Product.java, переопределяемый в дочерних классах.
-    * Добавлены unit тесты в ProductRepositoryTest.java.
-  * Создана ветка expection от ветки main в которой:
-    * Создан класс исключения NotFoundException.java, отнаследованный от RuntimeException - используемый в методе removeById() класса ProductRepository.java.
-    * Создан класс исключения AlreadyExistsException.java, отнаследованный от RuntimeException - используемый в методе saveProduct() класса ProductRepository.java.
-    * Реализованы автотесты на проверку работы исключений.
+### Задание 1
+* Создан Maven проект и настроен <a href="https://github.com/Nephedov/13.14.Java/blob/main/pom.xml">pom.xml</a> с плагинами и зависимостями:
+  * JunitJupier.
+  * Surefire.
+  * Lombok.
+  * Jacoco в режиме генерации отчетов и обрушения сборки по покрытию 100% по бранчам методов.
+  * Настроен <a href="https://github.com/Nephedov/13.14.Java/blob/main/.github/workflows/maven.yml">maven.yml</a> для Gitub CI.
+* Разрабон базовый класс <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Product.java">Product.java</a> - описывающий объект "продукт".
+* Разработано два унаследованных от <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Product.java">Product.java</a> класса:
+  <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Book.java">Book.java</a>,
+  <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/Smartphone.java">Smartphone.java</a>.
+* Реализован класс-репозиторий <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/ProductRepository.java">ProductRepository.java</a> для сохранения, получения сохраненных, удаления экземпляра Product.
+* Реализован класс-менеджер <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/main/java/ru/netology/javaqa/ProductManager.java">ProductManager.java</a>,
+  для добавления экземпляра Product в репозиторий и осуществления поиска по ним.
+* Реализован класс с автотестами <a href="https://github.com/Nephedov/13.14.Java/blob/main/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>, проверяющий работу разработанных классов.
+### Задание 2
+* Создана ветка <a href="https://github.com/Nephedov/13.14.Java/tree/rich">rich</a> от ветки <a href="https://github.com/Nephedov/13.14.Java/tree/main">main</a> в которой:
+  * Добавлен boolean matcher в <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/main/java/ru/netology/javaqa/Product.java">Product.java</a>, переопределяемый в дочерних классах.
+  * Добавлены unit тесты в <a href="https://github.com/Nephedov/13.14.Java/blob/rich/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
+### Задание 3, 4
+* Создана ветка <a href="https://github.com/Nephedov/13.14.Java/tree/expection">expection</a> от ветки <a href="https://github.com/Nephedov/13.14.Java/tree/main">main</a> в которой:
+  * Создан класс исключения <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/NotFoundException.java">NotFoundException.java</a>,
+    отнаследованный от RuntimeException - используемый в методе removeById() класса
+    <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/ProductRepository.java">ProductRepository.java</a>.
+  * Создан класс исключения <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/AlreadyExistsException.java">AlreadyExistsException.java</a>,
+    отнаследованный от RuntimeException - используемый в методе saveProduct() класса
+    <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/ProductRepository.java">ProductRepository.java</a>.
+  * Реализованы автотесты на проверку работы исключений - <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
 
 # Задание 1. Менеджер товаров (обязательное к выполнению)
 
