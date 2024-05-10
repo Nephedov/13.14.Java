@@ -54,6 +54,10 @@
     <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/main/java/ru/netology/javaqa/ProductRepository.java">ProductRepository.java</a>.
   * Реализованы автотесты на проверку работы исключений - <a href="https://github.com/Nephedov/13.14.Java/blob/expection/src/test/java/ProductRepositoryTest.java">ProductRepositoryTest.java</a>.
 
+---
+---
+
+
 # Описание Задания 1. Менеджер товаров (обязательное к выполнению)
 
 Вам необходимо реализовать менеджер товаров, который умеет:
